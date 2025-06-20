@@ -1,45 +1,4 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-
-/* === NAVBAR === */
+/* Top navigation bar container */
 .navbar {
   background-color: #2e2e3a;
   color: #fff;
@@ -47,45 +6,53 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0px 44px 0px 16px;
-  height: 65px;
-  width: 1920px;
-  max-width: 100vw;
-  font-size: 14px;
-  letter-spacing: 0.68px;
-  line-height: 21px;
+  height: 64px;
+  width: 100%;
+  border-bottom: 0.5px solid rgb(79, 96, 101); 
 }
 
+/* Left part: logo + divider + links */
 .navbar-left {
   display: flex;
-  align-items: center;
-  width: 225px;
-  padding: 0 36px;
+  align-items: center;    
   height: 100%;
+  padding: 0 8px;         
 }
 
+/* Logo image */
 .navbar-logo {
-  width: 153px;
-  height: 32px;
+  width: 152px;
+  height: 32px;            
   object-fit: contain;
-  display: block;
-  padding-bottom: 1px;
+  display: inline;
+  padding: 0;
+  margin-right: 24px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+/* Hover effect: slightly scale and fade */
+.navbar-logo:hover {
+  opacity: 0.85;
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+/* Vertical divider next to logo */
 .navbar-divider {
   height: 24px;
   width: 1px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgb(255, 255, 255);
   margin: 0 24px;
 }
 
+/* Container for navigation links */
 .navbar-links {
   display: flex;
   align-items: center;
 }
 
-.navbar-links a,
-.navbar-usd {
-  position: relative;
+/* Each individual nav link */
+.navbar-links a {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -96,36 +63,29 @@ body {
   line-height: 16px;
   color: #fcfcfc;
   height: 64px;
-  text-align: left;
   text-decoration: none;
   border-bottom: 2px solid transparent;
   transition: all 0.2s ease;
 }
 
-.navbar-links a:hover,
-.navbar-usd:hover {
+/* Link hover underline effect */
+.navbar-links a:hover {
   border-bottom: 2px solid white;
 }
 
-.navbar-links a span,
-.navbar-usd span {
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.28px;
-  line-height: 16px;
-  color: #fcfcfc;
-  text-align: left;
-}
-
+/* Chevron down icon */
 .chevron-icon {
+  font-size: 24px;
   transition: transform 0.3s ease;
 }
 
+/* Rotate chevron on hover */
 .navbar-links a:hover .chevron-icon,
 .navbar-usd:hover .chevron-icon {
   transform: rotate(180deg);
 }
 
+/* Right part: currency, cart, sign in */
 .navbar-right {
   display: flex;
   align-items: center;
@@ -133,6 +93,30 @@ body {
   justify-content: flex-end;
 }
 
+/* USD selector */
+.navbar-usd {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0px 30px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.28px;
+  line-height: 16px;
+  color: #fcfcfc;
+  height: 64px;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+/* Hover underline effect for USD */
+.navbar-usd:hover {
+  border-bottom: 2px solid white;
+}
+
+/* Cart section */
 .navbar-cart {
   display: flex;
   align-items: center;
@@ -144,10 +128,12 @@ body {
   text-transform: uppercase;
 }
 
+/* Wrapper for sign-in button */
 .signin-wrapper {
   padding: 0px 8px;
 }
 
+/* Sign-in button */
 .signin-btn {
   background-color: #33e39f;
   border: none;
@@ -166,14 +152,17 @@ body {
   transition: background-color 0.2s ease;
 }
 
+/* Sign-in button hover effect */
 .signin-btn:hover {
   background-color: #28c38c;
 }
 
+/* Icon inside sign-in button */
 .signin-btn .icon {
   color: #000;
 }
 
+/* Text inside sign-in button */
 .signin-btn span {
   color: #1e1f32;
   font-weight: 500;
@@ -182,4 +171,3 @@ body {
   margin: 0px 4px 0px 8px;
   text-align: center;
 }
-

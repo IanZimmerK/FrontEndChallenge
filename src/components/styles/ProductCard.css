@@ -1,0 +1,262 @@
+/* Styles for the product card container */
+.product-card {
+  background-color: #323648;
+  border-radius: 4px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  letter-spacing: 0.68px;
+  line-height: 21px;
+  padding: 8px 16px;
+  position: relative;
+}
+
+/* Product grid layout with 5 columns */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+}
+
+/* Badge section: ON SALE and In Stock */
+.product-badge {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ON SALE label styles */
+.on-sale {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* Green dot for the ON SALE badge */
+.dot {
+  width: 6px;
+  height: 6px;
+  background-color: #33e39f;
+  border-radius: 50%;
+}
+
+/* In stock label styles */
+.in-stock {
+  border: 1px solid #33e39f;
+  color: #33e39f;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+/* Container for the quantity selector */
+.product-controls {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Horizontal quantity selector layout */
+.qty-wrapper-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60px;
+  height: 48px;
+  background-color: #4c608566;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  overflow: hidden;
+  flex-direction: row;
+}
+
+/* Quantity display style */
+.qty-display {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+}
+
+/* Up/down arrow wrapper */
+.qty-arrows {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: transparent;
+}
+
+/* Arrow button styles */
+.qty-arrow {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 24px;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect for arrow buttons */
+.qty-arrow:hover {
+  background-color: rgba(51, 227, 159, 0.15);
+  color: #33e39f;
+}
+
+/* Main product body container */
+.product-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* Product image styling */
+.product-image {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  border-radius: 6px;
+  background-color: transparent;
+}
+
+/* Product name styling */
+.product-info h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* Price display layout */
+.product-price {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Current price */
+.new-price {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Previous price with strikethrough */
+.old-price {
+  color: #ff5a5a;
+  text-decoration: line-through;
+  font-size: 13px;
+}
+
+/* Product description text */
+.product-description {
+  font-size: 13px;
+  color: #bbb;
+  line-height: 1.3;
+}
+
+/* Action buttons container */
+.product-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Details button */
+.details-btn {
+  flex: 1;
+  padding: 0.5rem;
+  background-color: #44485a;
+  border: none;
+  border-radius: 6px;
+  color: #bbb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect for details button */
+.details-btn:hover {
+  background-color: #55596b;
+  color: #fff;
+}
+
+/* Add to cart button */
+.add-btn {
+  flex: 1;
+  padding: 0.5rem;
+  background-color: #4a5cff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover effect for add button */
+.add-btn:hover {
+  background-color: #6977ff;
+}
+
+/* Icon wrapper inside the add button */
+.add-icon-wrapper {
+  background-color: #3b49c2;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Products panel container */
+.products-panel {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  background-color: #2d2e3c;
+  border-radius: 5px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border: 0.5px solid rgb(79, 96, 101);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Header container of the product card */
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* Left column inside header */
+.product-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Product count text */
+.products-count {
+  font-size: 14px;
+  color: #ccc;
+}

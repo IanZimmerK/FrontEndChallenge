@@ -1,13 +1,16 @@
 import { FiChevronDown, FiShoppingCart, FiUser } from 'react-icons/fi';
+import "./styles/Navbar.css";
 
+// Top navigation bar with logo, menu links, currency switcher, cart and sign-in
 export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-left">
+        {/* Logo and menu links */}
         <img src="/chicks-logo-large-hovered.svg" alt="Chicks Gold" className="navbar-logo" />
         <div className="navbar-divider" />
         <div className="navbar-links">
-          {['Currency', 'Items', 'Accounts', 'Services', 'More', 'Sell'].map((item, idx) => (
+          {['CURRENCY', 'ITEMS', 'ACCOUNTS', 'SERVICES', 'MORE', 'SELL'].map((item, idx) => (
             <a key={idx} href="#">
               <span>{item}</span>
               <FiChevronDown className="chevron-icon" />
@@ -16,6 +19,7 @@ export default function Navbar() {
         </div>
       </div>
       <div className="navbar-right">
+        {/* Currency selector, cart, sign in */}
         <a href="#" className="navbar-usd">
           <span>USD</span>
           <FiChevronDown className="chevron-icon" />

@@ -1,0 +1,67 @@
+/* Pagination container styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 2rem 0;
+}
+
+/* Individual page button styles */
+.pagination-page {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Active page styling */
+.pagination-page.active {
+  background-color: #4a5cff;
+  font-weight: bold;
+}
+
+/* Hover effect for inactive pages */
+.pagination-page:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dots between page numbers */
+.pagination-dots {
+  color: #bbb;
+  font-size: 16px;
+}
+
+/* Previous/Next navigation button styles */
+.pagination-nav {
+  border: 1px solid #4a5cff;
+  background: none;
+  color: #fff;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover effect for nav buttons */
+.pagination-nav:hover {
+  background-color: rgba(74, 92, 255, 0.1);
+}
+
+/* Arrow icon for nav buttons */
+.pagination-arrow {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+  transition: transform 0.3s ease;
+}
+
+/* Disabled arrow style */
+.pagination-nav:disabled .pagination-arrow {
+  fill: #555;
+}

@@ -1,0 +1,292 @@
+/* Container for the main content layout */
+.content-container {
+  width: 1560px;
+  margin: 40px auto 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-size: 14px;
+  letter-spacing: 0.68px;
+  line-height: 21px;
+  color: #fff;
+}
+
+/* Main section for filters */
+.filters-section {
+  margin-top: 152px;
+  padding: 0 180px;
+}
+
+/* Title of the filter section */
+.filters-title {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  margin-bottom: 32px;
+}
+
+/* Wrapper for all filter controls */
+.filter-controls {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 14px;
+  letter-spacing: 0.68px;
+  color: #fff;
+}
+
+/* Shared styles for filter elements */
+.filter-select,
+.filter-box {
+  background-color: rgba(98, 98, 128, 0.3);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  height: 52px;
+}
+
+/* Hover effect for filter blocks */
+.filter-select:hover,
+.filter-box:hover {
+  background-color: rgba(46, 46, 58, 0.5);
+}
+
+/* Specific styling for the Game selector */
+.filter-select.select-game {
+  flex: 0 0 320px;
+  border-radius: 6px;
+  position: relative;
+}
+
+/* Container for Price + Item Type side by side */
+.filter-duo {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  flex-wrap: nowrap;
+  flex: 1;
+}
+
+/* Search bar styling */
+.filter-box.search-box {
+  height: 52px;
+  flex-grow: 1;
+  border-radius: 6px 0 0 6px;
+  min-width: 280px;
+  border-left: none;
+  margin: 0;
+}
+
+/* Search input inside search bar */
+.search-box input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  width: 100%;
+  outline: none;
+}
+
+/* Price filter block */
+.filter-duo > .filter-select.border-right {
+  border-radius: 0;
+  margin-left: -1px;
+  width: 140px;
+}
+
+/* Last item in filter duo (Item Type) */
+.filter-duo > .filter-select:last-child {
+  border-radius: 0 6px 6px 0;
+  width: 140px;
+  margin-left: -1px;
+}
+
+/* Generic text styling */
+.label {
+  opacity: 0.8;
+}
+.value {
+  margin-left: auto;
+}
+
+/* Icon positioning */
+.icon-left {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+.icon-right {
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+/* Highlighted green icon color */
+.green {
+  color: #33e39f;
+}
+
+/* Common icon inside filters */
+.filter-icon {
+  width: 24px;
+  height: 24px;
+  fill: #33e39f;
+}
+
+/* Text grouping inside filters */
+.filter-text-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 2px;
+}
+
+/* Filter top label text */
+.filter-label {
+  font-size: 10px;
+  color: #ccc;
+  line-height: 1;
+}
+
+/* Filter main value text */
+.filter-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+/* Arrow icon styling */
+.filter-arrow {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when open */
+.filter-arrow.open {
+  transform: rotate(180deg);
+}
+
+/* Wrapper for arrow positioning */
+.filter-arrow-wrapper {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Native <select> element hidden but functional */
+.native-select {
+  position: absolute;
+  width: 100%;
+  height: 52px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Sorting section next to product grid */
+.sort-section {
+  width: 192px;
+  height: 52px;
+  background-color: #323648;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* Sorting icon container */
+.sort-icon-group {
+  display: flex;
+  align-items: center;
+}
+
+/* Sorting icon style */
+.sort-icon {
+  width: 24px;
+  height: 24px;
+  fill: #33e39f;
+}
+
+/* Sort text layout */
+.sort-text-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 4px;
+}
+
+/* Label for sort (e.g. "Sort by") */
+.sort-label {
+  font-size: 12px;
+  color: #ccc;
+  line-height: 1.2;
+}
+
+/* Sort value text (e.g. "Featured") */
+.sort-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.2;
+}
+
+/* Arrow button for sorting */
+.sort-arrow-button {
+  background: transparent;
+  border: none;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sort arrow styling */
+.sort-arrow {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+  transition: transform 0.3s ease;
+}
+
+/* Arrow rotation on open */
+.sort-arrow-button.open .sort-arrow {
+  transform: rotate(180deg);
+}
+
+/* Layout for product cards */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Header above the product grid */
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+}
