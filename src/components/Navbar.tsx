@@ -1,15 +1,22 @@
-import { FiChevronDown, FiShoppingCart, FiUser } from 'react-icons/fi';
+import { useState } from 'react';
+import { FiChevronDown, FiShoppingCart, FiUser, FiMenu, FiX } from 'react-icons/fi';
 import "./styles/Navbar.css";
 
-// Top navigation bar with logo, menu links, currency switcher, cart and sign-in
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        {/* Logo and menu links */}
         <img src="/chicks-logo-large-hovered.svg" alt="Chicks Gold" className="navbar-logo" />
         <div className="navbar-divider" />
-        <div className="navbar-links">
+
+        {/* Toggle button visible on small screens */}
+        <button className="navbar-toggle" onClick={() => setMenuOpen(prev => !prev)}>
+          {menuOpen ? <FiX /> : <FiMenu />}
+        </button>
+
+        <div className={`navbar-links ${menuOpen ? "open" : ""}`}>
           {['CURRENCY', 'ITEMS', 'ACCOUNTS', 'SERVICES', 'MORE', 'SELL'].map((item, idx) => (
             <a key={idx} href="#">
               <span>{item}</span>
@@ -18,8 +25,8 @@ export default function Navbar() {
           ))}
         </div>
       </div>
-      <div className="navbar-right">
-        {/* Currency selector, cart, sign in */}
+
+      <div className={`navbar-right ${menuOpen ? "open" : ""}`}>
         <a href="#" className="navbar-usd">
           <span>USD</span>
           <FiChevronDown className="chevron-icon" />
